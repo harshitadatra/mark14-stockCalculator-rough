@@ -19,7 +19,7 @@ function calculateProfitLoss(initial,quantity,current)
         //loss logic
         var loss = initial-current;
         var lossPercentage = (loss/initial)*100;
-        console.log(`hey the loss is ${loss} and the loss percentage is ${lossPercentage}`);
+        showMessage(`oops the loss is ${loss} and the loss percentage is ${lossPercentage}`);
 
     }
     else if(current > initial)
@@ -27,17 +27,17 @@ function calculateProfitLoss(initial,quantity,current)
        //profit logic
        var profit =current-initial;
        var profitPercentage = (profit/initial);
-       console.log(`hey the profit is ${profit} and the profit percentage is ${profitPercentage}`);
+       showMessage(`hey the profit is ${profit} and the profit percentage is ${profitPercentage}`);
     }
     else{
         //display message 
-     console.log("no pain no gain");
+      showMessage("no pain no gain");
     }
 
 }
-// function showMessage(msg)
-// {
-//     message.innerText = msg;
+function showMessage(msg)
+{
+    message.innerText = msg;
    
-// }
+}
 // calculateProfitLoss(100,2,10);
